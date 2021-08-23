@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import airlinesReducer from './airlinesReducer';
+import citiesReducer from './citiesReducer';
 
 export default combineReducers({
-  airlines: airlinesReducer,
+  cities: citiesReducer,
 })
