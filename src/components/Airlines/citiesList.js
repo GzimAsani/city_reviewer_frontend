@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchCities } from '../Actions'
+import { fetchCities } from '../../Actions'
 
 
 class CitiesList extends Component {
