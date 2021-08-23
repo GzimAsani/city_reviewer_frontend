@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import todosReducer from './todosReducer';
+import airlinesReducer from './airlinesReducer';
 
-export default combineReducers({ 
-  todos: todosReducer,
+export default combineReducers({
+  airlines: airlinesReducer,
 })

@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchTodos } from '../Actions'
-import TodoForm from './tdoForm'
+import { fetchAirlines } from '../Actions'
 
 
-class TodoList extends Component {
-  
+class AirlinesList extends Component {
+
   componentDidMount() {
-    this.props.fetchTodos();
+    this.props.fetchAirlines();
   }
 
 
 
-  returnPost = () => this.props.todos.map((todos) => (
+  returnPost = () => this.props.airlines.map((todos) => (
     <div className="card container d-flex" key={todos.id}>
       <div className="card-body">
         <h5 className="card-title text-primary">
-          {todos.task}
+          {todos.name}
         </h5>
+        
       </div>
     </div>
   ))
@@ -25,13 +25,12 @@ class TodoList extends Component {
   render() {
     return (
       <div>
-        < TodoForm />
         {this.returnPost()}
       </div>
     );
   }
 };
 
-const getMapToProps = (state) => ({ todos: state.todos });
+const getMapToProps = (state) => ({ airlines: state.airlines });
 
-export default connect(getMapToProps, { fetchTodos })(TodoList);
+export default connect(getMapToProps, { fetchAirlines })(AirlinesList);

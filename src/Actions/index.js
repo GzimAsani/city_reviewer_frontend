@@ -1,7 +1,7 @@
 import jsonplaceholder from '../api/jsonPlaceholder';
 
-export const fetchTodos = () => async (dispatch) => {
-  const response = await jsonplaceholder.get('/todos');
+export const fetchAirlines = () => async (dispatch) => {
+  const response = await jsonplaceholder.get('/airlines');
 
   dispatch({ type: 'FETCH_REDUCERS', payload: response.data });
 };
