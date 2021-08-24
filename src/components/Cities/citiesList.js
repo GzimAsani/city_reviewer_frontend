@@ -17,6 +17,7 @@ class CitiesList extends Component {
         <h5 className="card-title text-primary">
           {todos.name}
         </h5>
+        {/* <img src={todos.image_url} /> */}
         
       </div>
     </div>

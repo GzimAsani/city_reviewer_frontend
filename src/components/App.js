@@ -1,14 +1,16 @@
-import citiesList from './Airlines/citiesList'
-import { Route, Switch } from 'react-router-dom'
-import city from './Airline/city'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import City from './City/city'
+import Cities from './Cities/citiesList'
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-     <Switch>
-        <Route exact path="/" component={citiesList}></Route>
-        <Route exact path="/cities" component={city}></Route>
-     </Switch>
+      <BrowserRouter>
+        <Switch>
+            <Route path="/" exact component={Cities}></Route>
+            <Route path="/cities/:slug" exact component={City}></Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
