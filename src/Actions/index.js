@@ -28,3 +28,15 @@ export const fetchReview = (slug) => async (dispatch) => {
   dispatch({ type: 'FETCH_REVIEW', payload: response.data.data });
   console.log(response.data.data)
 };
+
+export const signIn = () => {
+  return {
+    type: 'SIGN_IN'
+  };
+};
+
+export const signOut = () => {
+  return {
+    type: 'SIGN-OUT'
+  };
+};

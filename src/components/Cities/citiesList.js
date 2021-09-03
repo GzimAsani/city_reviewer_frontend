@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchCities } from '../../Actions'
 import City from './cityList'
+import GoogleAuth from '../googleAuth';
 import '../../stylecss/cityList.css'
 
 class CitiesList extends Component {
@@ -30,6 +31,7 @@ class CitiesList extends Component {
     return (
     <div className="mb-5">
       <h2 className="main-h2">Welcome to the Ballkan Review app</h2>
+        < GoogleAuth />
       <div className=''>
         {this.returnPost()}
       </div>

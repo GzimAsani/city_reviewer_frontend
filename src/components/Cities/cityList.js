@@ -8,7 +8,7 @@ const City = (props) => {
       <div>
         <div>
           <h2>{props.attributes.name}</h2>
-          <h2 className="d-flex">Rating: <h2>{props.attributes.avg_score}</h2></h2>
+          <h2 className="d-flex">Rating: <p>{props.attributes.avg_score}</p></h2>
         </div>
           <div className="city-image">
             <img className="card-img-top " src={props.attributes.image_url} alt="Card image cap"></img>
