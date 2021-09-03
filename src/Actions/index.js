@@ -29,14 +29,18 @@ export const fetchReview = (slug) => async (dispatch) => {
   console.log(response.data.data)
 };
 
-export const signIn = () => {
+export const signIn = (username) => {
   return {
-    type: 'SIGN_IN'
+    type: 'SIGN_IN',
+    payload: username
   };
 };
 
 export const signOut = () => {
   return {
-    type: 'SIGN-OUT'
+    type: 'SIGN_OUT'
   };
 };
+
+
+// gapi.auth2.getAuthInstance().currentUser.get().Rs.Qe
