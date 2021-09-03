@@ -1,0 +1,27 @@
+.wrapper {
+  padding: 50px 100px 50px 0;
+  font-size: 30px;
+}
+
+.image {
+  width: 15vh;
+  height: 15vh;
+  border-radius: 100%;
+  border: 10px solid rgba(0, 0, 0, 0.1)
+}
+
+.image-name {
+  font-size: 7vh;
+}
+
+.linkk {
+  text-decoration: none;
+  color: #F96138;
+  transition: width 2s, height 2s, transform 2s;
+}
+
+.linkk:hover {
+  font-size: 6vh;
+  font-weight: 900;
+  color:#fa744e;
+}
