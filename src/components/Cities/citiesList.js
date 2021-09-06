@@ -9,7 +9,6 @@ class CitiesList extends Component {
 
   componentDidMount() {
     this.props.fetchCities();
-   
   }
 
 
@@ -27,9 +26,12 @@ class CitiesList extends Component {
   ));
 
   render() {
-   
     return (
     <div className="mb-5">
+      <div className="d-flex">
+       { this.props.renderAuthButton}
+        <h4> Logged in as: {this.props.userName} </h4>
+      </div>
       <h2 className="main-h2">Welcome to the Ballkan Review app</h2>
       <div className=''>
         {this.returnPost()}
@@ -39,6 +41,8 @@ class CitiesList extends Component {
   }
 };
 
-const getMapToProps = (state) => ({ cities: state.cities });
+const getMapToProps = (state) => ({ 
+  cities: state.cities
+});
 
 export default connect(getMapToProps, { fetchCities })(CitiesList);

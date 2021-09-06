@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { signIn, signOut } from '../Actions'
 import '../stylecss/googleauth.css';
 import { Link } from 'react-router-dom';
+import CitiesList from './Cities/citiesList';
 
 class GoogleAuth extends React.Component  {
   
@@ -15,7 +16,7 @@ class GoogleAuth extends React.Component  {
         this.auth = window.gapi.auth2.getAuthInstance()
         this.onAuthCHange(this.auth.isSignedIn.get())
         // this.setState({ Username: this.auth.currentUser.Wd.Rs.Qe })
-        this.auth.isSignedIn.listen(this.onAuthCHange);;
+        this.auth.isSignedIn.listen(this.onAuthCHange);
       });
     });
   };
@@ -72,6 +73,17 @@ class GoogleAuth extends React.Component  {
   }
 
   render() {
+
+    if (this.props.isSignedIn) {
+      return (
+        < CitiesList 
+          isSignedIn={this.props.isSignedIn}
+          renderAuthButton={this.renderAuthButton()}
+          userName={this.props.username}
+        />
+      )
+    }
+
     return(
       <div className="container mt-5">
         <h1 className="main-title"> BALLKAN REVIEW APP </h1>

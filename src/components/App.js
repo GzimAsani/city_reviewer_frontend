@@ -9,7 +9,7 @@ const App = () => {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={GoogleAuth}></Route>
-          <Route path="/cities" exact component={Cities}></Route>
+          {/* <Route path="/cities" exact component={Cities}></Route> */}
           <Route path={"/cities/:slug"} exact component={ City }></Route>
         </Switch>
       </BrowserRouter>
