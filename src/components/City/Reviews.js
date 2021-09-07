@@ -1,24 +1,23 @@
 import React from 'react';
 import Rating from '../rating/rating';
-import '../../stylecss/reviews.css'
+import '../../stylecss/reviews.css';
 
 const Reviews = (props) => {
-  const {score, title, description} = props.attributes
-  
-  
+  const { score, title, description } = props.attributes;
+
   return (
     <div className=" rating-container2 mb-3">
       <div className="rating-container2-score card-body">
-        < Rating score={score} />
+        <Rating score={score} />
       </div>
       <div className="card-title">
-       {title}
-     </div>
+        {title}
+      </div>
       <div className="card-text">
         {description}
-     </div>
+      </div>
     </div>
   );
 };
 
-export default Reviews
+export default Reviews;

@@ -9,11 +9,10 @@
   font-size: 4vh;
   text-decoration: none;
   font-weight: 900;
-  color:white;
-  background-color: #F96138;
+  color: white;
+  background-color: #f96138;
   display: flex;
   justify-content: center;
   margin-top: 5vh;
   padding: 3vh;
 }
-

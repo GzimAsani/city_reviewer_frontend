@@ -10,5 +10,5 @@ export default combineReducers({
   city: cityReducer,
   reviews: reviewsReducer,
   review: reviewReducer,
-  auth: authReducer
-})
+  auth: authReducer,
+});

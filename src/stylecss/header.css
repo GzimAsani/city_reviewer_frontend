@@ -7,7 +7,7 @@
   width: 15vh;
   height: 15vh;
   border-radius: 100%;
-  border: 10px solid rgba(0, 0, 0, 0.1)
+  border: 10px solid rgba(0, 0, 0, 0.1);
 }
 
 .image-name {
@@ -16,12 +16,12 @@
 
 .linkk {
   text-decoration: none;
-  color: #F96138;
+  color: #f96138;
   transition: width 2s, height 2s, transform 2s;
 }
 
 .linkk:hover {
   font-size: 6vh;
   font-weight: 900;
-  color:#fa744e;
+  color: #fa744e;
 }

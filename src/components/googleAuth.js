@@ -1,28 +1,27 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { signIn, signOut } from '../Actions'
+import { signIn, signOut } from '../Actions';
 import '../stylecss/googleauth.css';
 import { Link } from 'react-router-dom';
 import CitiesList from './Cities/citiesList';
 
-class GoogleAuth extends React.Component  {
-  
-  componentDidMount(){
+class GoogleAuth extends React.Component {
+  componentDidMount() {
     window.gapi.load('client:auth2', () => {
       window.gapi.client.init({
         clientId: '1052472155569-beigfl93tiqk2e15m4kgvd0ucnebrimu.apps.googleusercontent.com',
-        scope: 'email'
+        scope: 'email',
       }).then(() => {
-        this.auth = window.gapi.auth2.getAuthInstance()
-        this.onAuthCHange(this.auth.isSignedIn.get())
+        this.auth = window.gapi.auth2.getAuthInstance();
+        this.onAuthCHange(this.auth.isSignedIn.get());
         // this.setState({ Username: this.auth.currentUser.Wd.Rs.Qe })
         this.auth.isSignedIn.listen(this.onAuthCHange);
       });
     });
-  };
+  }
 
   onAuthCHange = (isSignedIn) => {
-    if (isSignedIn){
+    if (isSignedIn) {
       this.props.signIn(this.auth.currentUser.get().Rs.Qe);
     } else {
       this.props.signOut();
@@ -30,7 +29,7 @@ class GoogleAuth extends React.Component  {
   };
 
   onSignInClick = () => {
-    this.auth.signIn()
+    this.auth.signIn();
   }
 
   onSignOutClick = () => {
@@ -38,53 +37,52 @@ class GoogleAuth extends React.Component  {
   }
 
   renderAuthButton = () => {
-    if (this.props.isSignedIn === null){
-    }else if (this.props.isSignedIn) {
+    if (this.props.isSignedIn === null) {
+    } else if (this.props.isSignedIn) {
       return (
         <button onClick={this.onSignOutClick} type="button" className="btn btn-danger my-btn">
-          <i className="fab fa-google mr-5"/>
+          <i className="fab fa-google mr-5" />
           Sign Out
         </button>
-      )
-    }else {
-     return (
-       <button onClick={this.onSignInClick} type="button" className="btn btn-danger my-btn">
-         <i className="fab fa-google mr-5" />
-         Sign In
-       </button>
-     )
+      );
+    } else {
+      return (
+        <button onClick={this.onSignInClick} type="button" className="btn btn-danger my-btn">
+          <i className="fab fa-google mr-5" />
+          Sign In
+        </button>
+      );
     }
   }
 
   renderCurrentUser = () => {
-    if (this.props.username === null){
+    if (this.props.username === null) {
 
-    }else {
+    } else {
       return (
         this.props.username
-      )
+      );
     }
   }
 
   renderIfLogged = () => {
     if (this.props.isSignedIn) {
-      return <Link to={"/cities"}>Visit ballkan capital cities</Link>
+      return <Link to="/cities">Visit ballkan capital cities</Link>;
     }
   }
 
   render() {
-
     if (this.props.isSignedIn) {
       return (
-        < CitiesList 
+        <CitiesList
           isSignedIn={this.props.isSignedIn}
           renderAuthButton={this.renderAuthButton()}
           userName={this.props.username}
         />
-      )
+      );
     }
 
-    return(
+    return (
       <div className="container mt-5">
         <h1 className="main-title"> BALLKAN REVIEW APP </h1>
         <p className="main-text"> Welcome to the Ballkan Reviewer app. In this app you can check the reviews given to the ballkan capital cities before you decide which one to visit. Log in with you gmail and share your experience with us! </p>
@@ -102,14 +100,12 @@ class GoogleAuth extends React.Component  {
         </div>
       </div>
     );
-  };
-};
-
-const mapStateToProps = (state) => {
-  return { 
-    isSignedIn: state.auth.isSignedIn,
-    username: state.auth.username
   }
 }
 
-export default connect(mapStateToProps, {signIn, signOut })(GoogleAuth);
+const mapStateToProps = (state) => ({
+  isSignedIn: state.auth.isSignedIn,
+  username: state.auth.username,
+});
+
+export default connect(mapStateToProps, { signIn, signOut })(GoogleAuth);

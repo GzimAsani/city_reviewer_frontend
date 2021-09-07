@@ -3,7 +3,7 @@ export default (state = [], action) => {
     case 'FETCH_CITY':
 
       return { ...state, [action.payload.slug]: action.payload };
-      
+
     default:
       return state;
   }
