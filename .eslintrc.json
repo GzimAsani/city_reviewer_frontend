@@ -35,7 +35,6 @@
   },
   "ignorePatterns": [
     "dist/",
-    "build/",
-    "src/components"
+    "build/"
   ]
 }
