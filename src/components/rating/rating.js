@@ -8,12 +8,12 @@ const Rating = (props) => {
   return (
     <span className="star-wrapper">
       <span className="stars">
-        {' '}
+
         *
         {score}
-        {' '}
+
         STARS*
-        {' '}
+
       </span>
     </span>
   );

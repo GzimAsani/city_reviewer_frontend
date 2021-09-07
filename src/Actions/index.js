@@ -4,6 +4,7 @@ export const fetchCities = () => async (dispatch) => {
   const response = await jsonplaceholder.get('/cities');
 
   dispatch({ type: 'FETCH_REDUCERS', payload: response.data.data });
+  console.log(response.data.data);
 };
 
 export const fetchReviews = () => async (dispatch) => {

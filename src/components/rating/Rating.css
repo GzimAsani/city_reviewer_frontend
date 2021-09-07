@@ -14,5 +14,6 @@
 
 .star-wrapper::before,
 .stars::before {
+
   content: "\f005 \0020 \f005 \0020 \f005 \0020 \f005 \0020 \f005";
 }
