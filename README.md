@@ -7,7 +7,7 @@ City Reviewer is a full stack application which allows it's users to login using
 ![img](./src/stylecss/pic.png)
 
 ## Live server
-<button> <a href="https://elated-curran-5872a0.netlify.app/"> TBA </a> </button>
+<button> <a href="https://eloquent-fermi-4c4dc7.netlify.app/"> Live link! </a> </button>
 
 ## Built With 
 
