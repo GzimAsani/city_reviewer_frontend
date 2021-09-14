@@ -72,15 +72,7 @@ class GoogleAuth extends React.Component {
   }
 
   render() {
-    if (this.props.isSignedIn) {
-      return (
-        <CitiesList
-          isSignedIn={this.props.isSignedIn}
-          renderAuthButton={this.renderAuthButton()}
-          userName={this.props.username}
-        />
-      );
-    }
+
 
     return (
       <div className="container mt-5">

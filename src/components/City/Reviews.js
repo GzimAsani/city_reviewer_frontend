@@ -3,7 +3,7 @@ import Rating from '../rating/rating';
 import '../../stylecss/reviews.css';
 
 const Reviews = (props) => {
-  const { score, title, description } = props.attributes;
+  const { score, title, description, email } = props.attributes;
 
   return (
     <div className=" rating-container2 mb-3">
@@ -16,6 +16,7 @@ const Reviews = (props) => {
       <div className="card-text">
         {description}
       </div>
+      {email}
     </div>
   );
 };
