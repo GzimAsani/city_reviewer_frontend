@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Header = (props) => {
   
-  const { name, image_url, average_score } = props.attributes;
+  const { name, image_url, avg_score } = props.attributes;
   const total = props.reviews.length;
   return (
     <div className="wrapper">
@@ -21,7 +21,7 @@ const Header = (props) => {
         </div>
         <div className="totalOutof mb-3">
           Rating:
-          {average_score}
+          {avg_score}
           {' '}
           out of 5
         </div>
