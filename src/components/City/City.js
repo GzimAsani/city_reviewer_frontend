@@ -12,7 +12,7 @@ const City = (props) => {
   
   useEffect(() => {
     const slug = props.match.params.slug
-    const url = `http://localhost:3000/api/v1/cities/${slug}`
+    const url = `https://saaaaaaaaas.herokuapp.com/api/v1/cities/${slug}`
 
     axios.get(url)
     .then(resp => { 
@@ -36,7 +36,7 @@ const City = (props) => {
     // axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken
 
     const city_id = city.data.id;
-    axios.post('http://localhost:3000/api/v1/reviews', {review, city_id})
+    axios.post('https://saaaaaaaaas.herokuapp.com/api/v1/reviews', {review, city_id})
     .then(resp => {
       const included = [...city.inclded, resp.data.data]
       setCity({...city, included});
