@@ -36,6 +36,8 @@
   "ignorePatterns": [
     "dist/",
     "build/",
-    "src/"
+    "src/components",
+    "src/containers"
+
   ]
 }

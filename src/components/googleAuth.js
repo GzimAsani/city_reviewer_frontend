@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { signIn, signOut } from '../Actions';
 import '../stylecss/googleauth.css';
 import { Link } from 'react-router-dom';
-import CitiesList from './Cities/citiesList';
 
 class GoogleAuth extends React.Component {
   componentDidMount() {

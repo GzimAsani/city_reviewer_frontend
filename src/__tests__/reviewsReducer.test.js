@@ -1,4 +1,4 @@
-import reviewsReducer from '../reducers/reviewsReducer'
+import reviewsReducer from '../reducers/reviewsReducer';
 
 test('Reducer can FETCH_TODOS', () => {
   const action = { type: 'FETCH_REDUCERS' };

@@ -1,11 +1,10 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom'
-import { signIn, signOut, fetchCities } from '../Actions'
+import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { signIn, signOut, fetchCities } from '../Actions';
 import City from '../components/Cities/citiesList';
 
 class ProtectedRoute extends React.Component {
-  
   componentDidMount() {
     this.props.fetchCities();
   }
@@ -18,12 +17,12 @@ class ProtectedRoute extends React.Component {
     )
       : <Redirect to={{ pathname: '/' }} />;
   }
-};
+}
 
 const mapStateToProps = (state) => ({
   isSignedIn: state.auth.isSignedIn,
   username: state.auth.username,
-  cities: state.cities
+  cities: state.cities,
 });
 
-export default connect(mapStateToProps, { signIn, signOut, fetchCities })(ProtectedRoute)
+export default connect(mapStateToProps, { signIn, signOut, fetchCities })(ProtectedRoute);
