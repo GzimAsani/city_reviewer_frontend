@@ -29,7 +29,9 @@ class CitiesList extends Component {
    
     return (
     <div className="mb-5">
-      <h2 className="main-h2">Welcome to the Ballkan Review app</h2>
+      <nav>
+        <h2 className="main-h2">Welcome to the Ballkan Review app</h2>
+      </nav>
       <div className=''>
         {this.returnPost()}
       </div>

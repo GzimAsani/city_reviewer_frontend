@@ -10,8 +10,8 @@ const App = () => {
     <div className="App">
       <BrowserRouter>
         <Switch>
-          {/* <Route path="/" exact component={GoogleAuth}></Route> */}
-          <Route path="/" exact component={Cities}></Route>
+          <Route path="/" exact component={GoogleAuth}></Route>
+          <ProtectedRoute path="/cities" exact component={Cities}></ProtectedRoute>
           <Route path="/cities/:slug" exact component={City}></Route>
         </Switch>
       </BrowserRouter>
