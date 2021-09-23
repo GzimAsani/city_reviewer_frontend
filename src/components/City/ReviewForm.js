@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import '../../stylecss/reviewform.css';
 import styled from 'styled-components';
 import Gray from './Stars/Gray';
