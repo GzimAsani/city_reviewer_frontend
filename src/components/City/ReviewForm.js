@@ -75,3 +75,7 @@ const ReviewForm = (props) => {
 };
 
 export default ReviewForm;
+
+ReviewForm.propTypes = {
+  type: PropTypes.string.isRequired,
+};
