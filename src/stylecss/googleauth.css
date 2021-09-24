@@ -1,0 +1,39 @@
+.main-text {
+  display: flex;
+  justify-content: center;
+  font-size: 2.2vh;
+  font-weight: 900;
+}
+
+.my-btn {
+  width: 50%;
+}
+
+.main-title {
+  display: flex;
+  justify-content: center;
+  font-size: 3.2vh;
+  font-weight: 900;
+  color: #f96138;
+}
+
+.tolink {
+  font-size: 4vh;
+  margin-bottom: 3vh;
+  text-decoration: none;
+  color: #f96138;
+}
+
+.exmp {
+  text-decoration: none;
+}
+
+.main-img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 900px) {
+  .main-text {
+    font-size: 6vh;
+  }
+}
